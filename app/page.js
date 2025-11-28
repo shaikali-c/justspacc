@@ -1,65 +1,66 @@
+import HeadingLora from "@/components/headings/heading_lora";
 import Image from "next/image";
+import Rocket_1 from "@/public/assets/images/h/rocket_2.jpg";
+import Rocket_2 from "@/public/assets/images/h/rocket.jpg";
+import Sci from "@/public/assets/images/h/sci.jpg";
+import Link from "next/link";
+import { ArrowUpRight, ChevronDown, Github, Instagram } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <section
+      className={`min-h-screen flex items-center md:justify-center flex-col`}
+    >
+      <div className="p-10">
+        <HeadingLora>
+          <h2 className="text-2xl md:text-3xl text-neutral-300 max-w-80">
+            Before you go in, just remember that space is huge and kinda weird,
+            that what's make it fun.
+          </h2>
+        </HeadingLora>
+        <div className="flex items-center justify-center md:items-stretch md:justify-center py-8 md:py-20">
+          <div className="w-70 hidden md:block h-100 relative -rotate-25 z-1 md:translate-x-10 opacity-70 hover:opacity-100 transition-opacity">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src={Rocket_2}
+              className="rounded-2xl object-cover"
+              alt="SUPER COOL!"
+              fill
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+          <div className="w-70 h-100 relative z-3 md:-translate-y-10">
+            <Image
+              src={Rocket_1}
+              className="rounded-2xl object-cover"
+              alt="SUPER COOL!"
+              fill
+            />
+          </div>
+          <div className="w-70 hidden md:block h-100 relative rotate-25 z-1 md:-translate-x-10 opacity-70 hover:opacity-100 transition-opacity">
+            <Image
+              src={Sci}
+              className="rounded-2xl object-cover"
+              alt="SUPER COOL!"
+              fill
+            />
+          </div>
         </div>
-      </main>
-    </div>
+        <div className="flex justify-center">
+          <Link
+            href={"/"}
+            className="bg-neutral-900 px-5 py-2.5 rounded-sm flex gap-1 items-center hover:bg-neutral-100 hover:text-neutral-950 transition-all"
+          >
+            Explore
+            <ArrowUpRight size={19} />
+          </Link>
+        </div>
+        {/* <section className="max-w-300 flex flex-col gap-5"></section>*/}
+      </div>
+      <footer
+        className={`absolute md:right-10 bottom-10 text-neutral-400 text-sm flex flex-col leading-5`}
+      >
+        <p>By Marwaan.</p>
+        <p>Peak performance & Peak security</p>
+      </footer>
+    </section>
   );
 }
