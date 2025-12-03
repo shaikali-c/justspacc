@@ -1,9 +1,5 @@
 import HeadingLora from "@/components/headings/heading_lora";
 
-import Link from "next/link";
-import Image from "next/image";
-
-import { ArrowUpRight, Flame, Sparkles } from "lucide-react";
 import HomeShowcase from "@/components/images_stuff/home_showcase";
 import ForThose from "@/components/text_based/for_those";
 import HomeFooter from "@/components/footers/home_footer";
@@ -21,9 +17,10 @@ export default function Home() {
             unpredictable, that's what makes exploring it so interesting.
           </h2>
         </HeadingLora>
+
         <HomeShowcase />
         <div className="flex justify-center">
-          <PrimaryButton text={"Explore"}></PrimaryButton>
+          <PrimaryButton text={"Explore"} dest={"/explore"}></PrimaryButton>
         </div>
       </div>
       <ForThose />

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Rocket_2 from "@/public/assets/images/h/rocket.jpg";
+import Main from "@/public/assets/images/h/op.jpg";
 import Sci from "@/public/assets/images/h/sci.jpg";
 
 export default function HomeShowcase() {
@@ -11,11 +12,11 @@ export default function HomeShowcase() {
           className="rounded-2xl object-cover"
           alt="SUPER COOL!"
           fill
-        />
+        />{" "}
       </div>
       <div className="w-70 h-100 relative z-3 md:-translate-y-10">
         <Image
-          src={"https://cdn.esahubble.org/archives/images/large/heic1516a.jpg"}
+          src={Main}
           className="rounded-2xl object-cover"
           alt="SUPER COOL!"
           fill
